@@ -4,6 +4,58 @@
   
   
   <entry>
+    <title>pm2启动nextjs项目</title>
+    <link href="/2023/05/16/pm2_next/"/>
+    <url>/2023/05/16/pm2_next/</url>
+    
+    <content type="html"><![CDATA[<p><strong>安装 pm2</strong></p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell">npm install <span class="hljs-literal">-g</span> pm2<br><br>yarn global add pm2<br></code></pre></td></tr></table></figure><p><strong>pm2 启动项目</strong></p><p>npm run xx，就可以写成：pm2 start npm – run xx</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">pm2 <span class="hljs-built_in">start</span> npm <span class="hljs-literal">--</span> run <span class="hljs-built_in">start</span><br></code></pre></td></tr></table></figure><p><strong>pm2 停止项目</strong></p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">pm2 stop all<br></code></pre></td></tr></table></figure><p><strong>更多参考</strong></p><p><a href="https://www.cnblogs.com/lxg0/p/7771229.html">PM2 来部署 nodejs 服务器永久开启 - 爱博子 - 博客园 (cnblogs.com)</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Node</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Node</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>在Linux 上通过npm install -g全局安装 pm2、yarn、pnpm 等命令找不到的解决方法</title>
+    <link href="/2023/03/20/cannot_find_command/"/>
+    <url>/2023/03/20/cannot_find_command/</url>
+    
+    <content type="html"><![CDATA[<h2 id="在-Linux-上通过-npm-install-g-全局安装-pm2、yarn、pnpm-等命令找不到的解决方法"><a href="#在-Linux-上通过-npm-install-g-全局安装-pm2、yarn、pnpm-等命令找不到的解决方法" class="headerlink" title="在 Linux 上通过 npm install -g 全局安装 pm2、yarn、pnpm 等命令找不到的解决方法"></a>在 Linux 上通过 npm install -g 全局安装 pm2、yarn、pnpm 等命令找不到的解决方法</h2><ol><li>第一步：修改 ~&#x2F;.bash_profile</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim ~/.bash_profile<br></code></pre></td></tr></table></figure><ol start="2"><li>第二步：新增环境变量</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> PATH=$(npm prefix -g)/bin:<span class="hljs-variable">$PATH</span><br></code></pre></td></tr></table></figure><ol start="3"><li>第三步：生效</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> ~/.bash_profile<br></code></pre></td></tr></table></figure><p>搞定</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Node</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>vite+react路由页面配置</title>
     <link href="/2023/02/20/import.meta.glob/"/>
     <url>/2023/02/20/import.meta.glob/</url>
