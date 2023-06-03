@@ -58,7 +58,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"hanling.space","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"hanling.space","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -71,7 +71,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -104,7 +104,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -116,7 +116,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -128,7 +128,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -140,7 +140,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -152,7 +152,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -164,7 +164,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/links/">
                 <i class="iconfont icon-link-fill"></i>
-                友链
+                <span>友链</span>
               </a>
             </li>
           
@@ -172,15 +172,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -249,7 +250,7 @@
       
       <a class="index-excerpt " href="/2023/05/16/pm2_next/" target="_self">
         <div>
-          安装 pm2 123npm install -g pm2yarn global add pm2  pm2 启动项目 npm run xx，就可以写成：pm2 start npm – run xx 1pm2 start npm -- run start  pm2 停止项目 1pm2 stop all  更多参考 PM2 来部署 nodejs 服务器永久开启 - 爱博子 - 博客园 (cnblogs.
+          pm2 start npm -- run xx
         </div>
       </a>
 
@@ -301,7 +302,7 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2023/03/20/cannot_find_command/" target="_self">
-          <img src="/images/stars.jpg" srcset="/img/loading.gif" lazyload alt="在Linux 上通过npm install -g全局安装 pm2、yarn、pnpm 等命令找不到的解决方法">
+          <img src="/images/snow-night.jpg" srcset="/img/loading.gif" lazyload alt="在Linux上通过npm install -g全局安装 pm2、yarn、pnpm等命令找不到的解决方法">
         </a>
       </div>
     
@@ -309,14 +310,14 @@
       <h1 class="index-header">
         
         <a href="/2023/03/20/cannot_find_command/" target="_self">
-          在Linux 上通过npm install -g全局安装 pm2、yarn、pnpm 等命令找不到的解决方法
+          在Linux上通过npm install -g全局安装 pm2、yarn、pnpm等命令找不到的解决方法
         </a>
       </h1>
 
       
       <a class="index-excerpt " href="/2023/03/20/cannot_find_command/" target="_self">
         <div>
-          在 Linux 上通过 npm install -g 全局安装 pm2、yarn、pnpm 等命令找不到的解决方法 第一步：修改 ~&#x2F;.bash_profile  1vim ~&#x2F;.bash_profile   第二步：新增环境变量  1export PATH&#x3D;$(npm prefix -g)&#x2F;bin:$PATH   第三步：生效  1source ~&#x2F;.bash_profile  搞定
+          修改 ~/.bash_profile;新增环境变量
         </div>
       </a>
 
@@ -370,7 +371,7 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2023/02/20/import.meta.glob/" target="_self">
-          <img src="/images/stars.jpg" srcset="/img/loading.gif" lazyload alt="vite+react路由页面配置">
+          <img src="/images/classroom.jpg" srcset="/img/loading.gif" lazyload alt="vite+react路由页面配置">
         </a>
       </div>
     
@@ -385,7 +386,7 @@
       
       <a class="index-excerpt " href="/2023/02/20/import.meta.glob/" target="_self">
         <div>
-          vite+react路由页面配置当我们在使用react进行开发通常会使用router进行不同页面切换，在这之前肯定要对页面进行路由配置（除非你使用nextjs之类的框架）。那就导致每多出一个页面都要去修改配置文件。写程序就是要避免这种简单且繁琐的事情，于是我了解到vite的一个批量导入的方法 import.meta.globVite 支持使用特殊的 import.meta.glob 函数从文件系统
+          Vite 支持使用特殊的 `import.meta.glob` 函数从文件系统导入多个模块：
         </div>
       </a>
 
