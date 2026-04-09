@@ -1,10 +1,10 @@
 ---
 layout: '@/layouts/IndividualPage.astro'
 
-title: 'Disclaimer'
-description: 'Last updated: 2024-11-26'
-language: 'En'
+title: '免责声明'
+description: '最后更新：2024-11-26'
+language: 'Zh'
 back: '/terms/list'
 ---
 
-It may be recommended to generate policies from [PolicyMaker.io](https://policymaker.io).
+建议使用 [PolicyMaker.io](https://policymaker.io) 生成政策模板。
