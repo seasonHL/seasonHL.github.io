@@ -7,15 +7,15 @@ export const theme: ThemeUserConfig = {
   /** Will be used in index page & copyright declaration */
   author: 'Pure Lab',
   /** Description metadata for your website. Can be used in page metadata. */
-  description: 'Stay hungry, stay foolish',
+  description: '求知若饥，虚心若愚',
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
   favicon: '/favicon/favicon.ico',
   /** Specify the default language for this site. */
   locale: {
-    lang: 'en-US',
-    attrs: 'en_US',
+    lang: 'zh-CN',
+    attrs: 'zh_CN',
     // Date locale
-    dateLocale: 'en-US',
+    dateLocale: 'zh-CN',
     dateOptions: {
       day: 'numeric',
       month: 'short',
@@ -47,11 +47,11 @@ export const theme: ThemeUserConfig = {
   /** Configure the header of your site. */
   header: {
     menu: [
-      { title: 'Blog', link: '/blog' },
-      { title: 'Docs', link: '/docs' },
-      { title: 'Projects', link: '/projects' },
-      { title: 'Links', link: '/links' },
-      { title: 'About', link: '/about' }
+      { title: '博客', link: '/blog' },
+      { title: '文档', link: '/docs' },
+      { title: '项目', link: '/projects' },
+      { title: '友链', link: '/links' },
+      { title: '关于', link: '/about' }
     ]
   },
 
@@ -68,13 +68,13 @@ export const theme: ThemeUserConfig = {
         style: 'text-sm' // Uno/TW CSS class
       },
       {
-        title: 'Travelling',
+        title: '开往',
         link: 'https://www.travellings.cn/go.html',
         style: 'text-sm'
       },
       // Privacy Policy link
       {
-        title: 'Site Policy',
+        title: '站点政策',
         link: '/terms/list',
         pos: 2 // position set to 2 will be appended to copyright line
       }
@@ -107,18 +107,18 @@ export const integ: IntegrationUserConfig = {
   links: {
     // Friend logbook
     logbook: [
-      { date: '2025-03-16', content: 'Is there a leakage?' },
-      { date: '2025-03-16', content: 'A leakage of what?' },
-      { date: '2025-03-16', content: 'I have a full seat of water, like, full of water!' },
-      { date: '2025-03-16', content: 'Must be the water.' },
-      { date: '2025-03-16', content: "Let's add that to the words of wisdom." }
+      { date: '2025-03-16', content: '有泄漏吗？' },
+      { date: '2025-03-16', content: '泄漏了什么？' },
+      { date: '2025-03-16', content: '我这边全是水，整整一座都是水！' },
+      { date: '2025-03-16', content: '那肯定是水的问题。' },
+      { date: '2025-03-16', content: '把这句加入人生箴言吧。' }
     ],
     // Yourself link info
     applyTip: [
-      { name: 'Name', val: theme.title },
-      { name: 'Desc', val: theme.description || 'Null' },
-      { name: 'Link', val: 'https://astro-pure.js.org/' },
-      { name: 'Avatar', val: 'https://astro-pure.js.org/favicon/favicon.ico' }
+      { name: '名称', val: theme.title },
+      { name: '描述', val: theme.description || '无' },
+      { name: '链接', val: 'https://astro-pure.js.org/' },
+      { name: '头像', val: 'https://astro-pure.js.org/favicon/favicon.ico' }
     ]
   },
   // Enable page search function
@@ -164,8 +164,8 @@ export const integ: IntegrationUserConfig = {
       pageview: true,
       comment: true,
       locale: {
-        reaction0: 'Like',
-        placeholder: 'Welcome to comment. (Email to receive replies. Login is unnecessary)'
+        reaction0: '点赞',
+        placeholder: '欢迎留言（填写邮箱可接收回复，无需登录）'
       },
       imageUploader: false
     }
@@ -173,22 +173,22 @@ export const integ: IntegrationUserConfig = {
 }
 
 export const terms: CardListData = {
-  title: 'Terms content',
+  title: '条款内容',
   list: [
     {
-      title: 'Privacy Policy',
+      title: '隐私政策',
       link: '/terms/privacy-policy'
     },
     {
-      title: 'Terms and Conditions',
+      title: '条款与条件',
       link: '/terms/terms-and-conditions'
     },
     {
-      title: 'Copyright',
+      title: '版权说明',
       link: '/terms/copyright'
     },
     {
-      title: 'Disclaimer',
+      title: '免责声明',
       link: '/terms/disclaimer'
     }
   ]
