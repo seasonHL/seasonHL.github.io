@@ -4,8 +4,6 @@ import { Image } from 'astro:assets'
 import { Button, Collapse, Icon } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
-import Sponsorship from '@/components/projects/Sponsorship.astro'
-import wechat from '@/assets/wechat-qrcode.jpg'
 import KeyIcon from '@/assets/icons/key.svg'
 
 const headings = [
@@ -13,8 +11,7 @@ const headings = [
   { depth: 2, slug: 'programs', text: '程序项目' },
   { depth: 2, slug: 'learnings', text: '学习记录' },
   { depth: 2, slug: 'others', text: '其他' },
-  { depth: 2, slug: 'gpg-signature', text: 'GPG 签名' },
-  { depth: 2, slug: 'sponsorship', text: '赞助' }
+  { depth: 2, slug: 'gpg-signature', text: 'GPG 签名' }
 ]
 ---
 
@@ -29,11 +26,8 @@ const headings = [
     />
   </p>
   <p>
-    如果你觉得我的项目有帮助，或者希望一起合作，欢迎通过赞助支持我的工作，或直接联系我交流想法。
+    如果你觉得我的项目有帮助，或者希望一起合作，欢迎直接联系我交流想法。
   </p>
-  <Button title='查看赞助方式' class='w-fit' href='#sponsorship'>
-    <Icon class='size-5' name='receive-money' slot='before' />
-  </Button>
 
   <h2 id='theme'>主题</h2>
   <ProjectSection
@@ -42,11 +36,11 @@ const headings = [
         name: '🍭 Astro-theme-pure',
         description: '一个由 Astro 构建的简洁而强大的博客主题。',
         links: [
-          { type: 'github', href: 'https://github.com/seasonHL' },
-          { type: 'site', href: 'https://github.com/seasonHL' },
+          { type: 'github', href: 'https://github.com/cworld1/astro-theme-pure' },
+          { type: 'site', href: 'https://github.com/cworld1/astro-theme-pure' },
           {
             type: 'doc',
-            href: 'https://github.com/seasonHL'
+            href: 'https://github.com/cworld1/astro-theme-pure/blob/main/src/content/blog/customize/index.md'
           }
         ]
       }
@@ -146,33 +140,4 @@ const headings = [
   <Button href='https://keys.openpgp.org/search?q=114514' title='查看我的密钥' target='_blank'>
     <KeyIcon class='size-5' slot='before' />
   </Button>
-
-  <!-- sponsorship -->
-  <h2 id='sponsorship'>赞助</h2>
-  <p>赞助后欢迎留言，或主动联系我。</p>
-  <Sponsorship
-    methods={[
-      { name: 'WeChat', icon: 'wechat-pay', image: wechat }
-    ]}
-  />
 </PageLayout>
-
-<style>
-  .sponsorship-card {
-    & .sponsorship-card-img {
-      opacity: 0.3;
-      --un-blur: blur(4px);
-      filter: var(--un-blur);
-    }
-
-    &:hover {
-      & .sponsorship-card-icon {
-        opacity: 0;
-      }
-      & .sponsorship-card-img {
-        opacity: 1;
-        --un-blur: blur(0);
-      }
-    }
-  }
-</style>
