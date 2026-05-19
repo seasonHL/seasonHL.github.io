@@ -32,6 +32,12 @@
           "intro": "随机前往开往的成员博客",
           "link": "https://www.travellings.cn/go.html",
           "avatar": "https://www.travellings.cn/assets/travelling.png"
+        },
+        {
+          "name": "Astro Theme Pure",
+          "intro": "简洁而强大的 Astro 博客主题",
+          "link": "https://github.com/cworld1/astro-theme-pure",
+          "avatar": "https://github.com/cworld1.png"
         }
       ]
     }
