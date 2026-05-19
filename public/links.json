@@ -5,16 +5,10 @@
       "desc": "Common links included in circle friends",
       "link_list": [
         {
-          "name": "Arthals' ink",
-          "intro": "所见高山远木，阔云流风；所幸岁月盈余，了无拘束",
-          "link": "https://arthals.ink/",
-          "avatar": "https://cdn.arthals.ink/Arthals.png"
-        },
-        {
-          "name": "CWorld Site",
-          "intro": "求知若愚，虚怀若谷",
-          "link": "https://cworld0.com/",
-          "avatar": "https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200"
+          "name": "zhw wiki",
+          "intro": "个人知识库与导航",
+          "link": "https://www.zhw.wiki/",
+          "avatar": "https://www.zhw.wiki/favicon.ico"
         }
       ]
     },
@@ -38,6 +32,12 @@
           "intro": "随机前往开往的成员博客",
           "link": "https://www.travellings.cn/go.html",
           "avatar": "https://www.travellings.cn/assets/travelling.png"
+        },
+        {
+          "name": "Astro Theme Pure",
+          "intro": "简洁而强大的 Astro 博客主题",
+          "link": "https://github.com/cworld1/astro-theme-pure",
+          "avatar": "https://github.com/cworld1.png"
         }
       ]
     }

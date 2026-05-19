@@ -1,22 +1,12 @@
 ---
 import { Image } from 'astro:assets'
 
-import { Button, Collapse, Icon } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
-import Sponsors from '@/components/projects/Sponsors.astro'
-import Sponsorship from '@/components/projects/Sponsorship.astro'
-import alipay from '@/assets/alipay-qrcode.jpg'
-import KeyIcon from '@/assets/icons/key.svg'
-import wechat from '@/assets/wechat-qrcode.jpg'
 
 const headings = [
-  { depth: 2, slug: 'theme', text: '主题' },
   { depth: 2, slug: 'programs', text: '程序项目' },
-  { depth: 2, slug: 'learnings', text: '学习记录' },
-  { depth: 2, slug: 'others', text: '其他' },
-  { depth: 2, slug: 'gpg-signature', text: 'GPG 签名' },
-  { depth: 2, slug: 'sponsorship', text: '赞助' }
+  { depth: 2, slug: 'others', text: '其他' }
 ]
 ---
 
@@ -24,101 +14,20 @@ const headings = [
   <p>GitHub 活动：</p>
   <p>
     <Image
-      src='https://ghchart.rshah.org/659eb9/cworld1'
+      src='https://ghchart.rshah.org/659eb9/seasonHL'
       alt='github activities'
       inferSize
       loading='lazy'
     />
   </p>
-  <p>
-    如果你觉得我的项目有帮助，或者希望一起合作，欢迎通过赞助支持我的工作，或直接联系我交流想法。
-  </p>
-  <Button title='查看赞助方式' class='w-fit' href='#sponsorship'>
-    <Icon class='size-5' name='receive-money' slot='before' />
-  </Button>
-
-  <h2 id='theme'>主题</h2>
-  <ProjectSection
-    projects={[
-      {
-        name: '🍭 Astro-theme-pure',
-        description: '一个由 Astro 构建的简洁而强大的博客主题。',
-        links: [
-          { type: 'github', href: 'https://github.com/cworld1/astro-theme-pure' },
-          { type: 'site', href: 'https://github.com/cworld1/astro-theme-pure' },
-          {
-            type: 'doc',
-            href: 'https://github.com/cworld1/astro-theme-pure/blob/main/src/content/blog/customize/index.md'
-          }
-        ]
-      }
-    ]}
-  />
 
   <h2 id='programs'>程序项目</h2>
   <ProjectSection
     projects={[
       {
-        name: '📒 Notie',
-        description:
-          '遵循 Material You 规范的 Android 笔记应用，使用 Java 开发。',
-        links: [
-          { type: 'github', href: 'https://github.com/cworld1/notie' },
-          {
-            type: 'release',
-            href: 'https://github.com/cworld1/notie/releases'
-          }
-        ]
-      },
-      {
-        name: '💄 PKU Art',
-        description: '用于美化 PKU 课程网站的脚本。',
-        links: [
-          { type: 'github', href: 'https://github.com/zhuozhiyongde/pku-art' },
-          { type: 'site', href: 'https://github.com/zhuozhiyongde/pku-art' },
-          { type: 'doc', href: 'https://docs.arthals.ink/docs/pku-art' }
-        ]
-      }
-    ]}
-  />
-  <Collapse title='一些旧项目'>
-    <ProjectSection
-      projects={[
-        {
-          name: 'Search Switcher',
-          description: '在搜索引擎页面中添加互链跳转。',
-          links: [{ type: 'github', href: 'https://github.com/cworld1/search-switcher' }]
-        },
-        {
-          name: 'Pure Baidu',
-          description: 'Baidu search page beautification module',
-          links: [
-            { type: 'doc', href: 'https://cworld0.com/blog/pure-baidu' },
-            { type: 'site', href: 'https://userstyles.org/styles/173673/pure' }
-          ]
-        }
-      ]}
-    />
-  </Collapse>
-
-  <h2 id='learnings'>学习记录</h2>
-  <ProjectSection
-    class='my-2'
-    projects={[
-      {
-        name: 'Rust Learning',
-        description: 'CWorld 学习 Rust 时的笔记与代码。',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/rust-learning' }]
-      },
-      {
-        name: 'CS 213 Learning',
-        description: '《计算机系统导论》课程的笔记、代码与学习心得。',
-        links: [
-          {
-            type: 'github',
-            href: 'https://github.com/zhuozhiyongde/Introduction-To-Computer-System-2023Fall-PKU'
-          }
-        ]
+        name: 'depspy',
+        description: 'Python 项目依赖分析工具',
+        links: [{ type: 'github', href: 'https://github.com/seasonHL/depspy' }]
       }
     ]}
   />
@@ -127,64 +36,10 @@ const headings = [
   <ProjectSection
     projects={[
       {
-        name: 'CWorld',
-        description: 'CWorld 的 GitHub 主页。',
-        links: [{ type: 'github', href: 'https://github.com/cworld1' }]
-      },
-      {
-        name: 'Arthals',
-        description: 'Arthals 的 GitHub 主页。',
-        links: [{ type: 'github', href: 'https://github.com/zhuozhiyongde' }]
+        name: 'seasonHL',
+        description: 'seasonHL 的个人网站。',
+        links: [{ type: 'github', href: 'https://github.com/seasonHL/seasonHL.github.io' }]
       }
-    ]}
-  />
-
-  <!-- gpg signature -->
-  <h2 id='gpg-signature'>GPG 签名</h2>
-  <p>
-    你可以通过 GPG 签名验证我发布文件的真实性。我的 GPG Key 为 <code>114514</code
-    >，可在 OpenPGP 公钥服务器上查询并下载。
-  </p>
-  <Button href='https://keys.openpgp.org/search?q=114514' title='查看我的密钥' target='_blank'>
-    <KeyIcon class='size-5' slot='before' />
-  </Button>
-
-  <!-- sponsorship -->
-  <h2 id='sponsorship'>赞助</h2>
-  <p>赞助后欢迎留言，或主动联系我。</p>
-  <Sponsorship
-    methods={[
-      { name: 'WeChat', icon: 'wechat-pay', image: wechat },
-      { name: 'Alipay', icon: 'alipay', image: alipay }
-    ]}
-  />
-  <p>感谢以下赞助者：</p>
-  <Sponsors
-    sponsors={[
-      { name: 'C*a（酷安@暴走の蜗牛）', amount: '2.00', date: '2019-07-02' },
-      { name: '华雄(QQ：1300****71)', amount: '5.00', date: '2019-12-30' },
-      { name: '◌(QQ：1934****45)', amount: '3.00', date: '2019-12-30' },
-      { name: 'Anonymous', amount: '20.00', date: '2022-04-06' }
     ]}
   />
 </PageLayout>
-
-<style>
-  .sponsorship-card {
-    & .sponsorship-card-img {
-      opacity: 0.3;
-      --un-blur: blur(4px);
-      filter: var(--un-blur);
-    }
-
-    &:hover {
-      & .sponsorship-card-icon {
-        opacity: 0;
-      }
-      & .sponsorship-card-img {
-        opacity: 1;
-        --un-blur: blur(0);
-      }
-    }
-  }
-</style>
