@@ -14,7 +14,7 @@ const headings = [
 
 const { friends } = links
 const linksConf = config.integ.links
-const linkEditPage = 'https://github.com/cworld1/astro-theme-pure/blob/main/public/links.json'
+const linkEditPage = 'https://github.com/seasonHL/seasonHL.github.io/blob/main/public/links.json'
 ---
 
 <PageLayout title='友链' {headings} comment>
@@ -36,7 +36,7 @@ const linkEditPage = 'https://github.com/cworld1/astro-theme-pure/blob/main/publ
   <blockquote class='not-prose grid grid-cols-[auto_1fr] gap-x-2 break-words border-s-4 ps-4'>
     {
       linksConf.applyTip.map(({ name, val }) => {
-        const script = `navigator.clipboard.writeText('${val}');document.dispatchEvent(new CustomEvent('toast',{detail:{message:'已复制“${val}”到剪贴板'}}))`
+        const script = `navigator.clipboard.writeText('${val}');document.dispatchEvent(new CustomEvent('toast',{detail:{message:'已复制"${val}"到剪贴板'}}))`
         return (
           <>
             <span class='text-end'>{name}:</span>
