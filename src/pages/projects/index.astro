@@ -5,6 +5,7 @@ import PageLayout from '@/layouts/CommonPage.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
 
 const headings = [
+  { depth: 2, slug: 'programs', text: '程序项目' },
   { depth: 2, slug: 'others', text: '其他' }
 ]
 ---
@@ -20,14 +21,20 @@ const headings = [
     />
   </p>
 
-  <h2 id='others'>其他</h2>
+  <h2 id='programs'>程序项目</h2>
   <ProjectSection
     projects={[
       {
         name: 'depspy',
         description: 'Python 项目依赖分析工具',
         links: [{ type: 'github', href: 'https://github.com/seasonHL/depspy' }]
-      },
+      }
+    ]}
+  />
+
+  <h2 id='others'>其他</h2>
+  <ProjectSection
+    projects={[
       {
         name: 'seasonHL',
         description: 'seasonHL 的个人网站。',
