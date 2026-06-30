@@ -1,103 +1,82 @@
-# Astro Theme Pure
+# seasonHL.github.io
 
-English | [简体中文](./README-zh-CN.md)
+seasonHL 的个人网站，定位是作品集优先的个人品牌站。
 
-A simple, fast and powerful blog & document theme built by Astro.
+网站用于展示 AI 工具、开发者工具、桌面应用和全栈产品实验，同时保留博客入口，用来记录项目复盘、技术笔记和产品判断。
 
-[![GitHub deployments](https://img.shields.io/github/deployments/cworld1/astro-theme-pure/production?style=flat&logo=vercel&label=vercel)](https://astro-pure.js.org/)
-[![NPM Version](https://img.shields.io/npm/v/astro-pure?logo=npm&style=flat)](https://www.npmjs.com/package/astro-pure)
-[![GitHub Release](https://img.shields.io/github/v/release/cworld1/astro-theme-pure?include_prereleases&style=flat&label=template)](https://github.com/cworld1/astro-theme-pure/releases)
-[![GitHub License](https://img.shields.io/github/license/cworld1/astro-theme-pure?style=flat)](https://github.com/cworld1/astro-theme-pure/blob/main/LICENSE)
+## 内容结构
 
-![image](./.github/assets/header.webp)
-![image](./.github/assets/body.webp)
+- 首页：个人定位、精选项目、技术能力、最近文章
+- 项目：精选项目和候选项目索引
+- 博客：文章、标签、归档和 RSS
+- 关于：关注方向、常用工具、社交入口和站点说明
+- 友链：朋友链接和站点信息
 
-> [!NOTE]
-> Known issues: 1. Header & customize options is still under development (template exposed still). 2. Theme template v4.0.5^ UnoCSS preset changed to PresetMini. If there's any problem, please report as issue.
+## 精选项目
 
-## Introduction
+- **DepSpy**：npm 依赖分析与可视化工具
+- **Prompt Hub**：提示词发现、提交和审核平台
+- **Desktop Agent**：基于 Tauri 的本地 AI 桌面助手
+- **OpenClaw Desktop Pet**：面向 agent runtime 状态的桌面交互实验
 
-Checkout [Demo Site →](https://astro-pure.js.org/)
+项目数据集中维护在 `src/data/projects.ts`。
 
-### :fire: Features
+## 技术栈
 
-- [x] :rocket: Fast & high performance
-- [x] :star: Simple & clean design
-- [x] :iphone: Responsive design
-- [x] :mag: Full-site search built with [pagefind](https://pagefind.app/)
-- [x] :world_map: Sitemap & RSS feed
-- [x] :spider_web: SEO-friendly
-- [x] :book: TOC (table of contents)
-- [x] :framed_picture: Dynamic open graph generation for posts
-- [x] :framed_picture: Mediumzoom lightbox for images
+- [Astro](https://astro.build/)
+- [Astro Theme Pure](https://github.com/cworld1/astro-theme-pure)
+- MDX / Content Collections
+- Pagefind search
+- Waline comments
+- GitHub Pages
 
-### :package: Components
+## 本地开发
 
-Theme includes a lot of components, which can not only be used in the theme, but also in other astro projects.
+环境要求：
 
-> For other astro projects, UnoCSS is required. See [Package README](https://github.com/cworld1/astro-theme-pure/blob/main/packages/pure/README.md#use-with-common-astro-project) for more details.
+- Node.js 18+
+- Bun
 
-- Basic components: `Aside`, `Tabs`, `Timeline`, `Steps`, `Spoiler`...
-- Advanced components: `GithubCard`, `LinkPreview`, `Quote`, `QRCode`...
+安装依赖：
 
-### :white_check_mark: Lighthouse score
-
-[![lighthouse-score](./.github/assets/lighthouse-score.png)](https://pagespeed.web.dev/analysis/https-cworld-top/o229zrt5o4?form_factor=mobile&hl=en)
-
-## Documentation
-
-[Docs](https://astro-pure.js.org/docs) | [Showcase](https://github.com/cworld1/astro-theme-pure/issues/10)
-
-## Package
-
-See [astro-theme-pure](https://www.npmjs.com/package/astro-pure) on npm.
-
-## Local development
-
-Environment requirements:
-
-- [Nodejs](https://nodejs.org/): 18.0.0+
-
-Clone the repository:
-
-```shell
-git clone https://github.com/cworld1/astro-theme-pure.git
-cd astro-theme-pure
-```
-
-Useful commands:
-
-```shell
-# install dependencies
+```bash
 bun install
-
-# start the dev server
-bun dev
-
-# build the project
-bun run build
-
-# preview (after the build)
-bun preview
-
-# create a new post
-bun new
 ```
 
-## Contributions
+启动开发服务器：
 
-To spend more time coding and less time fiddling with whitespace, this project uses code conventions and styles to encourage consistency. Code with a consistent style is easier (and less error-prone!) to review, maintain, and understand.
+```bash
+bun dev
+```
 
-## Thanks
+检查类型和内容：
 
-- [Astro Cactus](https://github.com/chrismwilliams/astro-theme-cactus)
-- [Astro Resume](https://github.com/srleom/astro-theme-resume)
-- [Starlight](https://github.com/withastro/starlight)
+```bash
+bun run check
+```
 
-Other third party references are on [Docs#Contributions](https://astro-pure.js.org/docs/advanced/thanks). Appreciate for all open source libraries.
+构建静态站点：
 
-## License
+```bash
+bun run build
+```
 
-This project is licensed under the Apache 2.0 License.
+预览构建产物：
 
-[![Star History Chart](https://api.star-history.com/svg?repos=cworld1/astro-theme-pure&type=Date)](https://star-history.com/#cworld1/astro-theme-pure&Date)
+```bash
+bun run preview
+```
+
+## 常用目录
+
+```text
+src/pages/              路由页面
+src/content/blog/       博客文章
+src/data/projects.ts    项目数据
+src/assets/             头像、图标和图片资产
+src/site.config.ts      站点标题、导航、页脚和集成配置
+```
+
+## 鸣谢
+
+这个网站基于 Astro Theme Pure 改造，感谢 Astro 和主题作者提供的基础能力。
