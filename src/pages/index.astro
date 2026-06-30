@@ -41,7 +41,7 @@ const latestPosts = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 >
   <main class='flex w-full flex-col items-center'>
     <section
-      class='portfolio-hero animate grid w-full gap-8 pb-12 pt-4 md:grid-cols-[1.05fr_0.95fr] md:items-end'
+      class='portfolio-hero animate grid w-full gap-8 pb-10 pt-8 md:grid-cols-[1.05fr_0.95fr] md:items-center lg:pt-12'
     >
       <div class='flex flex-col gap-y-7'>
         <div class='flex flex-wrap gap-2'>
@@ -203,7 +203,7 @@ const latestPosts = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 <style>
   .portfolio-hero {
-    min-height: calc(100dvh - 12rem);
+    min-height: clamp(32rem, 62dvh, 44rem);
   }
 
   .hero-panel::before {
