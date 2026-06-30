@@ -3,11 +3,11 @@ import type { CardListData, Config, IntegrationUserConfig, ThemeUserConfig } fro
 export const theme: ThemeUserConfig = {
   // === Basic configuration ===
   /** Title for your website. Will be used in metadata and as browser tab title. */
-  title: 'Astro Theme Pure',
+  title: 'seasonHL',
   /** Will be used in index page & copyright declaration */
-  author: 'Pure Lab',
+  author: 'seasonHL',
   /** Description metadata for your website. Can be used in page metadata. */
-  description: '求知若饥，虚心若愚',
+  description: '创意型全栈产品工程师，关注 AI 工具、开发者工具与桌面交互实验。',
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
   favicon: '/favicon/favicon.ico',
   /** Specify the default language for this site. */
@@ -47,8 +47,8 @@ export const theme: ThemeUserConfig = {
   /** Configure the header of your site. */
   header: {
     menu: [
-      { title: '博客', link: '/blog' },
       { title: '项目', link: '/projects' },
+      { title: '博客', link: '/blog' },
       { title: '友链', link: '/links' },
       { title: '关于', link: '/about' }
     ]
@@ -62,26 +62,15 @@ export const theme: ThemeUserConfig = {
     links: [
       // Registration link
       {
-        title: 'Moe ICP 114514',
-        link: 'https://icp.gov.moe/?keyword=114514',
-        style: 'text-sm' // Uno/TW CSS class
-      },
-      {
-        title: '开往',
-        link: 'https://www.travellings.cn/go.html',
+        title: 'GitHub',
+        link: 'https://github.com/seasonHL',
         style: 'text-sm'
-      },
-      // Privacy Policy link
-      {
-        title: '站点政策',
-        link: '/terms/list',
-        pos: 2 // position set to 2 will be appended to copyright line
       }
     ],
     /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
-    credits: true,
+    credits: false,
     /** Optional details about the social media accounts for this site. */
-    social: { github: 'https://github.com/cworld1/astro-theme-pure' }
+    social: { github: 'https://github.com/seasonHL' }
   },
 
   content: {
@@ -116,8 +105,8 @@ export const integ: IntegrationUserConfig = {
     applyTip: [
       { name: '名称', val: theme.title },
       { name: '描述', val: theme.description || '无' },
-      { name: '链接', val: 'https://astro-pure.js.org/' },
-      { name: '头像', val: 'https://astro-pure.js.org/favicon/favicon.ico' }
+      { name: '链接', val: 'https://seasonhl.github.io/' },
+      { name: '头像', val: 'https://seasonhl.github.io/favicon/favicon.ico' }
     ]
   },
   // Enable page search function

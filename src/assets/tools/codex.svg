@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Codex">
+  <rect width="128" height="128" rx="28" fill="#111827"/>
+  <path
+    d="M36 43.5 18 64l18 20.5"
+    fill="none"
+    stroke="#f8fafc"
+    stroke-width="9"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M92 43.5 110 64 92 84.5"
+    fill="none"
+    stroke="#f8fafc"
+    stroke-width="9"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M73 32 55 96"
+    fill="none"
+    stroke="#38bdf8"
+    stroke-width="9"
+    stroke-linecap="round"
+  />
+</svg>

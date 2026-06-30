@@ -1,45 +1,77 @@
 ---
 import { Image } from 'astro:assets'
+import { projects } from '@/data/projects'
 
 import PageLayout from '@/layouts/CommonPage.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
 
+const featured = projects.filter((project) => project.status === 'featured')
+const candidates = projects.filter((project) => project.status === 'candidate')
+
 const headings = [
-  { depth: 2, slug: 'programs', text: '程序项目' },
-  { depth: 2, slug: 'others', text: '其他' }
+  { depth: 2, slug: 'featured', text: '精选项目' },
+  { depth: 2, slug: 'candidates', text: '候选项目' },
+  { depth: 2, slug: 'activity', text: 'GitHub 活动' }
 ]
+
+const toSectionProject = (project: (typeof projects)[number]) => ({
+  name: project.name,
+  description: `${project.tagline}. ${project.description}`,
+  links: project.links.map((link) => ({ type: link.type, href: link.href }))
+})
 ---
 
 <PageLayout title='项目' {headings} view>
-  <p>GitHub 活动：</p>
+  <p>
+    这里收集我更愿意拿出来代表自己的项目。第一版先把作品按“能否支撑个人网站叙事”排序，而不是按仓库数量堆满。
+  </p>
+
+  <h2 id='featured'>精选项目</h2>
+  <p>这些项目最适合放在首页：它们能同时表达产品判断、工程实现和一点个人趣味。</p>
+  <ProjectSection projects={featured.map(toSectionProject)} />
+
+  <div class='not-prose mt-6 grid grid-cols-1 gap-4'>
+    {
+      featured.map((project) => (
+        <article class='rounded-2xl border bg-card p-5'>
+          <div class='flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between'>
+            <div>
+              <p class='text-sm text-muted-foreground'>{project.category}</p>
+              <h3 class='mt-1 text-xl font-semibold'>{project.name}</h3>
+            </div>
+            <div class='flex flex-wrap gap-2'>
+              {project.stack.slice(0, 4).map((item) => (
+                <span class='rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground'>
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+          <ul class='mt-4 ms-5 list-disc space-y-2 text-sm leading-6 text-muted-foreground'>
+            {project.highlights.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+      ))
+    }
+  </div>
+
+  <h2 id='candidates'>候选项目</h2>
+  <p>
+    这些项目方向合适，但更适合作为第二层内容。等补齐 README、截图、Demo
+    或复盘文章后，可以升级到首页精选。
+  </p>
+  <ProjectSection projects={candidates.map(toSectionProject)} />
+
+  <h2 id='activity'>GitHub 活动</h2>
+  <p>项目持续整理中，公开仓库和贡献记录可以从 GitHub 继续查看。</p>
   <p>
     <Image
-      src='https://ghchart.rshah.org/659eb9/seasonHL'
-      alt='github activities'
+      src='https://ghchart.rshah.org/D97706/seasonHL'
+      alt='seasonHL GitHub activities'
       inferSize
       loading='lazy'
     />
   </p>
-
-  <h2 id='programs'>程序项目</h2>
-  <ProjectSection
-    projects={[
-      {
-        name: 'depspy',
-        description: 'Python 项目依赖分析工具',
-        links: [{ type: 'github', href: 'https://github.com/seasonHL/depspy' }]
-      }
-    ]}
-  />
-
-  <h2 id='others'>其他</h2>
-  <ProjectSection
-    projects={[
-      {
-        name: 'seasonHL',
-        description: 'seasonHL 的个人网站。',
-        links: [{ type: 'github', href: 'https://github.com/seasonHL/seasonHL.github.io' }]
-      }
-    ]}
-  />
 </PageLayout>
